@@ -1,7 +1,6 @@
 module AnsibleTowerClient
-  class Inventory
+  class Inventory < BaseModel
     extend CollectionMethods
-    include InstanceMethods
 
     def self.endpoint
       "inventories".freeze

@@ -1,15 +1,6 @@
 module AnsibleTowerClient
-  class JobTemplate
+  class JobTemplate < BaseModel
     extend CollectionMethods
-    include InstanceMethods
-
-    attr_reader :extra_vars, :description
-
-    def initialize(raw_body)
-      @extra_vars  = raw_body['extra_vars']
-      @description = raw_body['description']
-      super
-    end
 
     def launch(vars = {})
       launch_url = "#{url}launch/"

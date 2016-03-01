@@ -1,7 +1,6 @@
 module AnsibleTowerClient
-  class Job
+  class Job < BaseModel
     extend CollectionMethods
-    include InstanceMethods
 
     def self.endpoint
       "jobs".freeze

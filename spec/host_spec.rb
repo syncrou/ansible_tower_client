@@ -11,11 +11,11 @@ describe AnsibleTowerClient::Host do
   it "#initialize instantiates an #{described_class} from a hash" do
     obj = described_class.new(instance)
 
-    expect(obj).to              be_a described_class
-    expect(obj.id).to           be_a Integer
-    expect(obj.url).to          be_a String
-    expect(obj.instance_id).to  be_a String
-    expect(obj.inventory_id).to be_a Integer
-    expect(obj.name).to         be_a String
+    expect(obj).to             be_a described_class
+    expect(obj.id).to          be_a Integer
+    expect(obj.url).to         be_a String
+    expect(obj.instance_id).to be_a String
+    expect(obj.inventory).to   be_a Integer
+    expect(obj.name).to        be_a String
   end
 end

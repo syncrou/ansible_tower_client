@@ -1,7 +1,6 @@
 module AnsibleTowerClient
-  class AdHocCommand
+  class AdHocCommand < BaseModel
     extend CollectionMethods
-    include InstanceMethods
 
     def relaunch
       Api.post("#{url}relaunch/")
